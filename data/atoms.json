@@ -1,0 +1,31 @@
+{
+	"title": "Атомы",
+	"links": [
+		{
+			"text": "ЮР. ЛИЦАМ",
+			"title": "link-title"
+		},
+		{
+			"href": "javascript:void(0);",
+			"text": "ЮР. ЛИЦАМ",
+			"title": "link-title"
+		},
+		{
+			"href": "javascript:void(0);",
+			"text": "ЮР. ЛИЦАМ",
+			"title": "link-title",
+			"disabled": true
+		}
+	],
+	"links_action": [
+		{
+			"href": "javascript:void(0);",
+			"text": "подробнее о товаре",
+			"title": "link-action",
+			"icon": {
+				"name": "12/arrow-right",
+				"size": "12"
+			}
+		}
+	]
+}

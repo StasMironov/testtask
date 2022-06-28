@@ -1,0 +1,39 @@
+{
+    "block": {
+        "title": "Бесплатный звонок по России",
+        "items": [
+            {
+                "href": "tel:880064072288",
+                "text": "8 800 <span>6407-22-88</span>",
+                "action": {
+                    "text": "<span>заказать</span> <span>звонок</span>",
+                    "title": "Button"
+                },
+                "icons": [
+                    {
+                        "name": "20/phone",
+                        "size": "20",
+                        "theme": "red"
+                    }
+                ]
+            },
+            {
+                "href": "tel:890264072288",
+                "text": "8 9026 <span>407-22-88</span>",
+                "icons": [
+                    {
+                        "name": "23/watsapp",
+                        "size": "23",
+                        "theme": "green"
+                    },
+                    {
+                        "name": "23/viber",
+                        "size": "23",
+                        "theme": "purple"
+                    }
+                ],
+                "offset_right": "1"
+            }
+        ]
+    }
+}

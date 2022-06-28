@@ -1,0 +1,77 @@
+<div class="hero {% if hero.theme %}hero--theme-{{hero.theme}}{% endif %}">
+    <div class="hero__container container">
+       <div class="hero__base">
+            <div class="hero__grid">
+                {% if hero.logo %}
+                    <a href={{hero.logo.href}} class="hero__logo" data-fade-in-up>
+                        {% view '@image' with {
+                            image: hero.logo
+                        } %}
+                    </a>
+                {% endif %}
+
+                {% if hero.links_info %}
+                    <ul class="hero__links" data-fade-in-up>
+                        {% for link in hero.links_info %}
+                            <li class="hero__link" data-fade-in-up data-delay="{{ (loop.index0 / 4)}}">
+                                {% view '@link' with {
+                                    link: link
+                                } %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+
+                {% if hero.email %}
+                    <div class="hero__email" data-fade-in-up>
+                        {% if hero.email.label %}
+                            <span>{{hero.email.label}}</span>
+                        {% endif %}
+                        {% if hero.email.href %}
+                            <a href={{hero.email.href}}>{{hero.email.text}}</a>
+                        {% endif %}
+                    </div>
+                {% endif %}
+
+                {% if hero.search_form %}
+                    {% view '^search-form' %}
+                {% endif %}
+
+                {# slider #}
+
+                {% if hero.sliderProduct %}
+                    <div class="hero__slider">
+                        {% view '&slider-product' with {
+                            slider: hero.sliderProduct
+                        } %}
+                    </div>
+                {% endif %}
+
+                <div class="hero__bg">
+                    {% if hero.background.tab or hero.background.mob %}
+                        {% view '@image-adaptive' with {
+                            image: hero.background
+                        } %}
+                    {% else %}
+                        {% view '@image' with {
+                            image: hero.background
+                        } %}
+                    {% endif %}
+                </div>
+            </div>
+            
+            {% if hero.block_contacts %}
+                <div class="hero__contacts">
+                    {% view '&block-contacts' with {
+                        block: hero.block_contacts
+                    }%}
+                </div>
+            {% endif %}
+           
+
+
+            {# nav #}
+            
+       </div>
+    </div>
+</div>

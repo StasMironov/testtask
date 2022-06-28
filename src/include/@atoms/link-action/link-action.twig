@@ -1,0 +1,31 @@
+{% if link.href %}
+	<a href="{{ link.href }}"
+	   class="link-action{% if link.class %} {{ link.class }}{% endif %}{% if link.theme %} link-action--{{ link.theme }}{% endif %}{% if link.background %} link-action--bg-{{ link.background }}{% endif %}{% if link.disabled %} link-action--disabled{% endif %}"{% if link.attr %} {{ link.attr }}{% endif %}{% if link.title %} title="{{ link.title }}"{% endif %}>
+		{% if link.text %}
+			<span class="link-action__text">{{ link.text }}</span>
+		{% endif %}
+
+         {% if link.icon %}
+            <span class="link-action__icon">
+                {% view '@icon' with {
+                    icon: link.icon
+                } %}
+            </span>
+        {% endif %}
+	</a>
+{% else %}
+	<button type="{{ link.type?: 'button' }}"
+			class="link-action{% if link.class %} {{ link.class }}{% endif %}{% if link.theme %} link-action--{{ link.theme }}{% endif %}{% if link.background %} link-action--bg-{{ link.background }}{% endif %}"{% if link.attr %} {{ link.attr }}{% endif %}{% if link.title %} title="{{ link.title }}"{% endif %}{% if link.disabled %} disabled{% endif %}>
+		{% if link.text %}
+			<span class="link-action__text">{{ link.text }}</span>
+		{% endif %}
+
+         {% if link.icon %}
+            <span class="link-action__icon">
+                {% view '@icon' with {
+                    icon: link.icon
+                } %}
+            </span>
+        {% endif %}
+	</button>
+{% endif %}

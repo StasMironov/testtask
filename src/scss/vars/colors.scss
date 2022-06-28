@@ -1,0 +1,40 @@
+$color-true-black: #000;
+$color-black: #000;
+$color-background: #F5F5F5;
+
+$color-white: #fff;
+$color-gray: #837D7C;
+$color-gray-2:#605F5F;
+$color-gray-3:#9C9C9C;
+
+
+
+
+
+$color-red: #DF0000;
+$color-red-2: #FF0000;
+$color-red-3: #DD1F26;
+
+$color-orange: #EF962E;
+
+$color-purple: #7D51A0;
+
+$color-green: #14990A;
+
+$color-dark: #000;
+
+
+
+$colors: (
+	"white": $color-white,
+	"black": $color-black,
+	"gray": $color-gray,
+	"gray-dark": $color-gray-2,
+	"red": $color-red,
+	"orange": $color-orange,
+	"purple": $color-purple,
+	"green": $color-green,
+	"dark": $color-dark
+);
+
+

@@ -1,0 +1,172 @@
+{
+    "title": "Главная",
+    "hero": {
+        "theme": "has-slider",
+        "logo": {
+            "src": "tmp/hero/logo.svg",
+			"alt": "logo",
+            "href": "/"
+        },
+        "links_info": [
+            {
+                "href": "javascript:void(0);",
+                "text": "о нас"
+            },
+            {
+                "href": "javascript:void(0);",
+                "text": "юр.лицам"
+            },
+            {
+                "href": "javascript:void(0);",
+                "text": "контакты"
+            }
+        ],
+        "email": {
+            "label": "Заказ по email:",
+            "text": "sale@amur-stan.ru",
+            "href": "mailto:test@gmail.com;"
+        },
+        "search_form": {
+            "action": "/",
+            "method": "POST",
+            "field": {
+                "big": true,
+                "icon_right": true,
+                "placeholder": "Введите что нибудь...",
+                "icon": {
+                    "name": "search"
+                },
+                "name": "search"
+            }
+        },
+        "block_contacts": {
+            "title": "Бесплатный звонок по России",
+            "items": [
+                {
+                    "href": "tel:880064072288",
+                    "text": "8 800 <span>6407-22-88</span>",
+                    "action": {
+                        "text": "<span>заказать</span> <span>звонок</span>",
+                        "title": "Button"
+                    },
+                    "icons": [
+                        {
+                            "name": "20/phone",
+                            "size": "20",
+                            "theme": "red"
+                        }
+                    ]
+                },
+                {
+                    "href": "tel:890264072288",
+                    "text": "8 9026 <span>407-22-88</span>",
+                    "icons": [
+                        {
+                            "name": "23/watsapp",
+                            "size": "23",
+                            "theme": "green"
+                        },
+                        {
+                            "name": "23/viber",
+                            "size": "23",
+                            "theme": "purple"
+                        }
+                    ],
+                    "offset_right": "1"
+                }
+            ]
+        },
+        "sliderProduct": {
+            "slides": [
+                {
+                    "label": "лазерные станки",
+                    "discount":{
+                        "text": "-15%"
+                    },
+                    "title": "CERTON HIGH&nbsp;SPEED",
+                    "desc": "Лазерный станок CERTON 6090 High speed (130 Вт) осуществляет лазерную резку и гравировку неметаллических материалов, таких как пластик, фанера, дерево, оргстекло, акрил, кожа, ткань и т.п. ",
+                    "image": {
+                        "src": "tmp/sliders/slider-product/product1.png",
+                        "alt": "alt image",
+                        "tab": {
+                            "srcset": [
+                                {
+                                    "src": "tmp/sliders/slider-product/product1.png",
+                                    "scale": "1"
+                                }
+                            ]
+                        },
+                        "mob": {
+                            "srcset": [
+                                {
+                                    "src": "tmp/sliders/slider-product/product1-mob.png",
+                                    "scale": "1"
+                                }
+                            ]
+                        }
+                    },
+                    "action": {
+                        "href": "javascript:void(0);",
+                        "text": "подробнее о товаре",
+                        "title": "link-action",
+                        "icon": {
+                            "name": "12/arrow-right",
+                            "size": "12"
+                        }
+                    }
+                },
+                {
+                    "label": "лазерные станки 2",
+                    "title": "CERTON HIG ",
+                    "desc": "Лазерный станок CERTON 6090 High speed (130 Вт)",
+                    "image": {
+                        "src": "tmp/sliders/slider-product/product1.png",
+                        "alt": "alt image",
+                        "tab": {
+                            "srcset": [
+                                {
+                                    "src": "tmp/sliders/slider-product/product1.png",
+                                    "scale": "1"
+                                }
+                            ]
+                        },
+                        "mob": {
+                            "srcset": [
+                                {
+                                    "src": "tmp/sliders/slider-product/product1-mob.png",
+                                    "scale": "1"
+                                }
+                            ]
+                        }
+                    },
+                    "action": {
+                        "href": "javascript:void(0);",
+                        "text": "подробнее о товаре",
+                        "title": "link-action",
+                        "icon": {
+                            "name": "12/arrow-right",
+                            "size": "12"
+                        }
+                    }
+                }
+            ],
+            "action": {
+                "href": "javascript:void(0);",
+                "text": "Перейти в блог",
+                "title": "Перейти в блог"
+            }
+        },
+        "background": {
+            "src": "tmp/hero/hero-main/bg.png",
+            "alt": "alt image",
+            "mob": {
+                "srcset": [
+                    {
+                        "src": "tmp/hero/hero-main/bg-mob.png",
+                        "scale": "1"
+                    }
+                ]
+            }
+        }
+    }
+}

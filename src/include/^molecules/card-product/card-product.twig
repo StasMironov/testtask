@@ -1,0 +1,64 @@
+<div class="card-product">
+    <div class="card-product__wrapper">
+        <div class="card-product__left">
+            {% if card.label %} 
+                <div class="card-product__label" data-fade-in-up data-fade-in-up data-delay="0.5">
+                    {{card.label}}
+                </div>
+            {% endif %}
+
+            {% if card.title %} 
+                <div class="card-product__title" data-fade-in-up data-delay="0.6">
+                    {{card.title}}
+
+                   {% if card.discount %} 
+                        <div class="card-product__discount">
+                            {% view '@icon' with {
+                                icon: {
+                                    name: "patterns/discount",
+                                    size: "fit"
+                                }
+                            } %}
+                            {% if card.discount.text %}
+                                <span class="card-product__discount-text">
+                                    {{card.discount.text}}
+                                </span>
+                            {% endif %}
+                        </div>
+            {% endif %}
+                </div>
+            {% endif %}
+
+            
+
+            {% if card.desc %} 
+                <div class="card-product__desc" data-fade-in-up data-delay="0.8">
+                    {{card.desc}}
+                </div>
+            {% endif %}
+
+            {% if card.action %} 
+                <div class="card-product__action" data-fade-in-up data-delay="0.9">
+                    {% view '@link-action' with {
+                        link: card.action
+                    } %}
+                </div>
+            {% endif %}
+
+
+        </div>
+        <div class="card-product__right">
+            <div class="card-product__image">
+                {% if card.image.tab or card.image.mob %}
+                    {% view '@image-adaptive' with {
+                        image: card.image
+                    } %}
+                {% else %}
+                    {% view '@image' with {
+                        image: card.image
+                    } %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

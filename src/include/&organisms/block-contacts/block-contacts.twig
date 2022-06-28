@@ -1,0 +1,34 @@
+<div class="block-contacts" data-fade-in-up data-delay="0.1">
+    {% if block.title %}
+        <div class="block-contacts__title">
+            {{block.title}}
+        </div>
+    {% endif %}
+
+    {% if block.items %}
+        <div class="block-contacts__items">
+            {% for item in block.items %}
+                <div class="block-contacts__item{% if item.offset_right %} offset-right-{{item.offset_right}} {% endif %}">
+                    {% if item.icons %}
+                        {% for icon in item.icons %}
+                            <span class="block-contacts__icon">
+                            {% view '@icon' with {
+                                icon: icon
+                            } %}
+                        </span>
+                        {% endfor %}
+                    {% endif %}
+                    <a href={{item.href}} class="block-contacts__text">
+                        {{item.text}}
+                    </a>
+                    
+                    {% if item.action %}
+                        {% view '@button-text' with {
+                            button: item.action
+                        } %}
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+</div>
