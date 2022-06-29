@@ -6,12 +6,26 @@
 				</div>
 			{% endif %}
 			<nav class="header__navigation">
-				<ul class="header__list">
+				<ul class="header__items">
 					{% for item in header.navigation %}
 						<li class="header__item">
 							{% if item.href %}
 								<a href="{{ item.href }}"
-								   class="header__link"{% if item.external %} target="_blank"{% endif %}>{{ item.text }}</a>
+								   class="header__link"{% if item.external %} target="_blank"{% endif %}>
+								   {% if item.icon %}
+										<span class="header__icon">
+											{% view '@icon' with {
+												icon: item.icon
+											} %}
+											{% if item.qty %}
+												<span class="header__qty {% if item.theme %}header__qty--{{item.theme}}{% endif %}" >
+													12
+												</span>
+											{% endif %}
+										</span>
+								   {% endif %}
+								   {{ item.text }}
+								</a>
 							{% else %}
 								<span class="header__link header__link--active">{{ item.text }}</span>
 							{% endif %}

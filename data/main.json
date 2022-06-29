@@ -168,5 +168,45 @@
                 ]
             }
         }
-    }
+    },
+    "header": {
+        "navigation": [
+            {
+                "href": "javascript:void(0);",
+                "text": "сравнение",
+                "icon": {
+                    "name": "20/list",
+                    "size": "20"
+                },
+                "qty": true,
+                "theme": "gray"
+            },
+            {
+                "href": "javascript:void(0);",
+                "text": "избранное",
+                "icon": {
+                    "name": "20/heart",
+                    "size": "20"
+                }
+            },
+            {
+                "href": "javascript:void(0);",
+                "text": "корзина заказа",
+                "icon": {
+                    "name": "20/cart",
+                    "size": "20"
+                },
+                "qty": true,
+                "theme": "red"
+            },
+            {
+                "href": "javascript:void(0);",
+                "text": "личный кабинет",
+                "icon": {
+                    "name": "20/lk",
+                    "size": "20"
+                }
+            }
+        ]
+      }
 }
