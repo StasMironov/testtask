@@ -1,49 +1,61 @@
 
-// RobotoCondensed
-
-@font-face {
-	font-family: 'RobotoCondensed';
-	font-style: normal;
-	font-weight: 300;
-	font-display: swap;
-	src: url('../fonts/RobotoCondensed/RobotoCondensed-Light.woff2') format('woff2'),
-	url('../fonts/RobotoCondensed/RobotoCondensed-Light.woff') format('woff');
-}
-
-@font-face {
-	font-family: 'RobotoCondensed';
-	font-style: normal;
-	font-weight: 400;
-	font-display: swap;
-	src: url('../fonts/RobotoCondensed/RobotoCondensed-Regular.woff2') format('woff2'),
-	url('../fonts/RobotoCondensed/RobotoCondensed-Regular.woff') format('woff');
-}
-
-@font-face {
-	font-family: 'RobotoCondensed';
-	font-style: normal;
-	font-weight: 700;
-	font-display: swap;
-	src: url('../fonts/RobotoCondensed/RobotoCondensed-Bold.woff2') format('woff2'),
-	url('../fonts/RobotoCondensed/RobotoCondensed-Bold.woff') format('woff');
-}
-
 // Roboto
 
-@font-face {
-	font-family: 'Roboto';
-	font-style: normal;
-	font-weight: 300;
-	font-display: swap;
-	src: url('../fonts/Roboto/Roboto-Light.woff2') format('woff2'),
-	url('../fonts/Roboto/Roboto-Light.woff') format('woff');
-}
+// @font-face {
+// 	font-family: 'Roboto';
+// 	font-style: normal;
+// 	font-weight: 300;
+// 	font-display: swap;
+// 	src: url('../fonts/Roboto/Roboto-Light.woff2') format('woff2'),
+// 	url('../fonts/Roboto/Roboto-Light.woff') format('woff');
+// }
+
+// @font-face {
+// 	font-family: 'Roboto';
+// 	font-style: normal;
+// 	font-weight: 500;
+// 	font-display: swap;
+// 	src: url('../fonts/Roboto/Roboto-Medium.woff2') format('woff2'),
+// 	url('../fonts/Roboto/Roboto-Medium.woff') format('woff');
+// }
+
+// Lato
+
+// @font-face {
+// 	font-family: 'Lato';
+// 	font-style: normal;
+// 	font-weight: 300;
+// 	font-display: swap;
+// 	src: url('../fonts/Lato/Lato-Light.woff2') format('woff2'),
+// 	url('../fonts/Latoo/Lato-Light.woff') format('woff');
+// }
 
 @font-face {
-	font-family: 'Roboto';
+	font-family: 'Lato';
 	font-style: normal;
 	font-weight: 500;
 	font-display: swap;
-	src: url('../fonts/Roboto/Roboto-Medium.woff2') format('woff2'),
-	url('../fonts/Roboto/Roboto-Medium.woff') format('woff');
+	src: url('../fonts/Lato/Lato-Regular.woff2') format('woff2'),
+	url('../fonts/Lato/Lato-Regular.woff') format('woff');
 }
+
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: url('../fonts/Lato/Lato-Medium.woff2') format('woff2'),
+	url('../fonts/Lato/Lato-Medium.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+	src: url('../fonts/Lato/Lato-Semibold.woff2') format('woff2')
+	url('../fonts/Lato/Lato-Semibold.woff') format('woff');
+}
+
+
+

@@ -1,212 +1,214 @@
 {
     "title": "Главная",
-    "hero": {
-        "theme": "has-slider",
+    "header": {
         "logo": {
-            "src": "tmp/hero/logo.svg",
-			"alt": "logo",
-            "href": "/"
+            "icon": {
+              "name": "logo",
+              "size": "fit"
+            },
+            "href": "javascript:void(0);"
         },
-        "links_info": [
+        "navigation": [
             {
                 "href": "javascript:void(0);",
-                "text": "о нас"
+                "text": "Бизнес",
+                "active": true
             },
             {
                 "href": "javascript:void(0);",
-                "text": "юр.лицам"
+                "text": "О нас"
             },
             {
                 "href": "javascript:void(0);",
-                "text": "контакты"
-            }
-        ],
-        "email": {
-            "label": "Заказ по email:",
-            "text": "sale@amur-stan.ru",
-            "href": "mailto:test@gmail.com;"
-        },
-        "search_form": {
-            "action": "/",
-            "method": "POST",
-            "field": {
-                "big": true,
-                "icon_right": true,
-                "placeholder": "Введите что нибудь...",
-                "icon": {
-                    "name": "search"
-                },
-                "name": "search"
-            }
-        },
-        "block_contacts": {
-            "title": "Бесплатный звонок по России",
-            "items": [
-                {
-                    "href": "tel:880064072288",
-                    "text": "8 800 <span>6407-22-88</span>",
-                    "action": {
-                        "text": "<span>заказать</span> <span>звонок</span>",
-                        "title": "Button"
-                    },
-                    "icons": [
-                        {
-                            "name": "20/phone",
-                            "size": "20",
-                            "theme": "red"
-                        }
-                    ]
-                },
-                {
-                    "href": "tel:890264072288",
-                    "text": "8 9026 <span>407-22-88</span>",
-                    "icons": [
-                        {
-                            "name": "23/watsapp",
-                            "size": "23",
-                            "theme": "green"
-                        },
-                        {
-                            "name": "23/viber",
-                            "size": "23",
-                            "theme": "purple"
-                        }
-                    ],
-                    "offset_right": "1"
-                }
-            ]
-        },
-        "sliderProduct": {
-            "slides": [
-                {
-                    "label": "лазерные станки",
-                    "discount":{
-                        "text": "-15%"
-                    },
-                    "title": "CERTON HIGH&nbsp;SPEED",
-                    "desc": "Лазерный станок CERTON 6090 High speed (130 Вт) осуществляет лазерную резку и гравировку неметаллических материалов, таких как пластик, фанера, дерево, оргстекло, акрил, кожа, ткань и т.п. ",
-                    "image": {
-                        "src": "tmp/sliders/slider-product/product1.png",
-                        "alt": "alt image",
-                        "tab": {
-                            "srcset": [
-                                {
-                                    "src": "tmp/sliders/slider-product/product1.png",
-                                    "scale": "1"
-                                }
-                            ]
-                        },
-                        "mob": {
-                            "srcset": [
-                                {
-                                    "src": "tmp/sliders/slider-product/product1-mob.png",
-                                    "scale": "1"
-                                }
-                            ]
-                        }
-                    },
-                    "action": {
-                        "href": "javascript:void(0);",
-                        "text": "подробнее о товаре",
-                        "title": "link-action",
-                        "icon": {
-                            "name": "12/arrow-right",
-                            "size": "12"
-                        }
-                    }
-                },
-                {
-                    "label": "лазерные станки 2",
-                    "title": "CERTON HIG ",
-                    "desc": "Лазерный станок CERTON 6090 High speed (130 Вт)",
-                    "image": {
-                        "src": "tmp/sliders/slider-product/product1.png",
-                        "alt": "alt image",
-                        "tab": {
-                            "srcset": [
-                                {
-                                    "src": "tmp/sliders/slider-product/product1.png",
-                                    "scale": "1"
-                                }
-                            ]
-                        },
-                        "mob": {
-                            "srcset": [
-                                {
-                                    "src": "tmp/sliders/slider-product/product1-mob.png",
-                                    "scale": "1"
-                                }
-                            ]
-                        }
-                    },
-                    "action": {
-                        "href": "javascript:void(0);",
-                        "text": "подробнее о товаре",
-                        "title": "link-action",
-                        "icon": {
-                            "name": "12/arrow-right",
-                            "size": "12"
-                        }
-                    }
-                }
-            ],
-            "action": {
+                "text": "Цены"
+            },
+            {
                 "href": "javascript:void(0);",
-                "text": "Перейти в блог",
-                "title": "Перейти в блог"
+                "text": "Оформить заказ"
             }
-        },
+        ]
+    },
+    "hero": {
         "background": {
-            "src": "tmp/hero/hero-main/bg.png",
+            "src": "tmp/hero/hero-main/bg.jpg",
             "alt": "alt image",
             "mob": {
                 "srcset": [
                     {
-                        "src": "tmp/hero/hero-main/bg-mob.png",
+                        "src": "tmp/hero/hero-main/bg.jpg",
                         "scale": "1"
                     }
                 ]
             }
-        }
-    },
-    "header": {
-        "navigation": [
+        },
+        "title": "<span>Lorem ipsum</span> dolor sit ametconsectetur <span>adipiscing</span>",
+        "subtitle": "At vero eos et accusamus et iusto odio dignissimos ducimus!",
+        "list": [
+           "Totam rem aperiam eaque ipsa",
+           "Sit voluptatem accusantium doloremque laudantium",
+           "Sed ut perspiciatis, unde omnis iste natus error"
+        ],
+        "actions": [
             {
-                "href": "javascript:void(0);",
-                "text": "сравнение",
-                "icon": {
-                    "name": "20/list",
-                    "size": "20"
-                },
-                "qty": true,
-                "theme": "gray"
+                "text": "заказать"
             },
             {
                 "href": "javascript:void(0);",
-                "text": "избранное",
-                "icon": {
-                    "name": "20/heart",
-                    "size": "20"
-                }
-            },
-            {
-                "href": "javascript:void(0);",
-                "text": "корзина заказа",
-                "icon": {
-                    "name": "20/cart",
-                    "size": "20"
-                },
-                "qty": true,
-                "theme": "red"
-            },
-            {
-                "href": "javascript:void(0);",
-                "text": "личный кабинет",
-                "icon": {
-                    "name": "20/lk",
-                    "size": "20"
-                }
+                "text": "подробнее",
+                "theme": "white"
             }
-        ]
-      }
+          ]
+    },
+    "block_order": {
+        "title": "Оформление  <span>Заказа</span>",
+        "subtitle": "Перед заполнением формы ознакомьтесь с нашей схемой работы!",
+        "background": {
+			"src": "tmp/order/bg.png",
+			"alt": "alt image",
+			"tab": {
+				"srcset": [
+					{
+						"src": "tmp/order/bg.png",
+						"scale": "1"
+					}
+				]
+			}
+		},
+        "block_benefit": {
+            "cards": [
+                {
+                    "icon": {
+                        "name": "55/search",
+                        "size": "55"
+                    },
+                    "text": "Lorem ipsum dolor sit amet"
+                },
+                {
+                    "icon": {
+                        "name": "55/percent",
+                        "size": "55"
+                    },
+                    "text": "Lorem ipsum dolor sit amet"
+                },
+                {
+                    "icon": {
+                        "name": "55/doc",
+                        "size": "55"
+                    },
+                    "text": "Lorem ipsum dolor sit amet"
+                },
+                {
+                    "icon": {
+                        "name": "55/mail",
+                        "size": "55"
+                    },
+                    "text": "Lorem ipsum dolor sit amet"
+                },
+                {
+                    "icon": {
+                        "name": "55/money",
+                        "size": "55"
+                    },
+                    "text": "Lorem ipsum dolor sit amet"
+                }
+            ]
+        },
+        "formOrder": {
+            "id": "form-1",
+            "name": "form-1",
+            "method": "POST",
+            "action": "/ajax/call/?repo=test.frontend&status=success",
+            "attr": "data-ajax-form",
+            "selects": [
+                {
+                  "select": true,
+                  "id": "select-2",
+                  "name": "select-2",
+                  "attr": "data-attr",
+                  "placeholder": "Выберите тип системы",
+                  "options": [
+                    {
+                      "value": "value-1",
+                      "text": "Sed ut perspiciatis"
+                    },
+                    {
+                      "value": "value-2",
+                      "text": "Nemo enim ipsam"
+                    },
+                    {
+                      "value": "value-3",
+                      "text": "Et harum quidem"
+                    },
+                    {
+                        "value": "value-4",
+                        "text": "Temporibus autem"
+                    },
+                    {
+                    "value": "value-5",
+                    "text": "Itaque earum rerum"
+                    }
+                  ]
+                }
+              ],
+            "fields": [
+                {
+                    "input": true,
+                    "id": "form-1-input-1",
+                    "name": "form-1-input-1",
+                    "required": true,
+                    "autocomplete": "off",
+                    "placeholder": "Ваш e-mail",
+                    "type": "email"
+                    
+                },
+                {
+                    "input": true,
+                    "id": "form-1-input-2",
+                    "name": "form-1-input-2",
+                    "autocomplete": "off",
+                    "placeholder": "Ваше имя",
+                    "required": true
+                
+                }
+            ],
+            "file": {
+                "input": true,
+                "theme": "white",
+                "name": "file",
+                "id": "file",
+                "type": "file",
+                "accept": ".doc,.docx,.txt,.pdf",
+                "placeholder": "",
+                "max_size": 2,
+                "filetext": "Файл не должен превышать 2Mb. или добавьте ссылку",
+                "typeErrorMessage": "Неверный тип файла",
+                "sizeMessage": "Файл превышает 2Mb, пожалуйста, загрузите другой файл",
+                "icon": {
+                  "name": "20/download",
+                  "size": "20"
+                },
+                "button_upload": {
+                  "text": "Прикрепить файл",
+                  "aria": "удалить загруженные данные",
+                  "theme": "white"
+                },
+                "text": "Файл в формате doc, pdf или txt"
+              },
+            "slider": {
+                "name": "send-result-polzunok",
+                "id":"send-result-polzunok",
+                "attr": "data-slider",
+                "label": "Sed ut perspiciatis, unde omnis iste natus"
+            },
+            "submit": {
+                "type": "submit",
+                "text": "Отправить",
+                "title": "Отправить",
+                "size": "big"
+            }
+        }
+    }
+    
+   
+    
 }

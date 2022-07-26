@@ -1,11 +1,11 @@
 @mixin h1 {
-	font-size: rem(40);
-	line-height: 1;
+	font-size: rem(32);
+	line-height: 1.2;
 	font-weight: 700;
 	font-family: $ff-title;
 
 	@include media-breakpoint-up(md) {
-		font-size: rem(90);
+		font-size: rem(48);
 	}
 }
 
@@ -14,9 +14,10 @@
 	line-height: 1.2;
 	font-weight: 400;
 	font-family: $ff-title;
+	text-transform: uppercase;
 
 	@include media-breakpoint-up(md) {
-		font-size: rem(40);
+		font-size: rem(36);
 	}
 }
 
@@ -45,13 +46,13 @@
 }
 
 @mixin text-lead {
-	font-size: rem(15);
-	line-height: 1.6;
-	font-weight: 500;
+	font-size: rem(18);
+	line-height: 1;
+	font-weight: 700;
 
 	@include media-breakpoint-up(md) {
-		font-size: rem(18);
-		line-height: 1.4;
+		font-size: rem(20);
+		line-height: 1;
 	}
 }
 
@@ -66,19 +67,20 @@
 }
 
 @mixin large-body {
-	font-size: rem(17);
-	line-height: 1.5;
+	font-size: rem(18);
+	line-height: 1;
 
 
 	@include media-breakpoint-up(md) {
-		font-size: rem(17);
+		font-size: rem(18);
 	}
 }
 
 @mixin text-small {
-	font-size: rem(14);
-	line-height: 1.6;
-	font-weight: 300;
+	font-size: rem(13);
+	line-height: 1;
+	font-weight: 600;
+	text-transform: uppercase;
 }
 
 @mixin text-label {

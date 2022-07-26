@@ -40,9 +40,11 @@ const Animate = {
 					},
 				}
 			);
-
 			item.addEventListener('sal:in', () => {
+				
 				timeline.play();
+
+				
 			});
 		}
 	},

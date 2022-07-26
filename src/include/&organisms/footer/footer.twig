@@ -1,0 +1,43 @@
+<footer class="footer">
+	<div class="footer__container container">
+        {% if footer.copy %}
+            <div class="footer__copy">
+                {{footer.copy}}
+            </div>
+        {% endif %}
+
+        {% if footer.pay %}
+            <div class="footer__pay">
+                {% for item in footer.pay %}
+                    <div class="footer__pay-item">
+                        {% view "@link" with {
+                            link: item
+                        }%}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+
+        {% if footer.contacts %}
+            <div class="footer__contacts">
+                {% for link in footer.contacts %}
+                    <a href={{link.href}} class="footer__link">
+                        {% if link.icon %}
+                            <span class="footer__link-icon">
+                                {% view '@icon' with {
+                                    icon: link.icon
+                                } %}
+                            </span>
+                        {% endif %}
+
+                        <div class="footer__link-text">
+                            {{link.text}}
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+        {% endif %}
+	</div>
+	
+</footer>

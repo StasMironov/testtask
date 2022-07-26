@@ -23,6 +23,11 @@
 <body {% if bodyClass %}class="{{ bodyClass }}"{% endif %}>
 
 {% view "&header" %}
+{% if menu %}
+	{% view '&menu' with {
+		menu: menu
+	} %}
+{% endif %}
 
 {% block content %}{% endblock %}
 

@@ -1,87 +1,41 @@
 .header {
 	$root: &;
-
-	position: relative;
-	z-index: 100;
-	display: block;
-	width: 100%;
-	background-color: $color-white;
+	position: fixed;
+	background-color: rgba(16, 16, 29, 0.9);
 	box-shadow: 0 4px 4px rgba(0,0,0,0.15);
+	top: 0;
+	left: 0;
+	z-index: 200;
+	width: 100%;
+	transition: transform 0.4s cubic-bezier(0.475, 0.425, 0, 0.995), background-color 0.3s ease, box-shadow 0.3s ease; 
+	
 
-	&:before {
-		position: absolute;
-		z-index: 1;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
+	&.is-hide {
+		transform: translateY(-100%);
+	}
+
+	&.show-header {
 		background-color: $color-white;
-		content: "";
-	}
-
-	&__container {
-		position: relative;
-		z-index: 1;
-		display: flex;
-		align-items: center;
-		height: rem(60);
-		width: 100%;
-	}
-
-
-	&__qty {
-		position: absolute;
-		right: 0;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		font-size: rem(12);
-		background-color: red;
-		border-radius: 50%;
-		height: rem(20);
-		width: rem(20);
-		right: rem(-8);
-		bottom: rem(10);
-
-		&--gray {
-			background-color: #E9E9E9
-		}
-
-		&--red {
-			background-color: $color-red-2;
-			color: white;
-		}
-	}
-
-
-
-	&__content {
-		display: flex;
-		align-items: center;
-		justify-content: flex-end;
-		width: 100%;
-
-		@include media-breakpoint-up(lg) {
-			justify-content: space-between;
-		}
 	}
 
 	&__navigation {
-		margin-left: auto;
+		color: $color-white;
+
 		@include media-breakpoint-down(md) {
 			display: none;
 		}
 	}
 
-	&__icon {
-		position: relative;
-		margin-right: rem(16);
-		top: -1px;
-	}
+	&__logo {
+		display: block;
+		width: rem(250);
+		margin-right: auto;
+		color: $color-white;
 
-	&__list {
-		display: flex;
-		align-items: center;
+		@at-root body .in-progress & {
+			// color: $color-black;
+			color: $color-black;
+		}
 	}
 
 	&__items {
@@ -89,110 +43,256 @@
 		align-items: center;
 	}
 
+	&__content {
+		display: flex;
+		padding: rem(32) 0 rem(36);
+
+		@include media-breakpoint-down(md) {
+			padding: rem(24) 0 rem(24);
+		}
+	}
+
 	&__item {
-		&:not(:last-child) {
-			margin-right: rem(82);
+		&:not(:last-child){
+			margin-right: rem(60);
 		}
 	}
 
 	&__link {
-		display: block;
-		font-family: $ff-title;
-		font-size: rem(16);
-		line-height: rem(32);
-		font-weight: 500;
-		color: $color-black;
-		border: 0;
-		padding: 0;
-		background-color: transparent;
-		cursor: pointer;
 		@include defaultTransition(color);
-		text-transform: uppercase;
+		color: $color-white;
 
-		// @include touchLessHover {
-		// 	color: $color-red;
-		// }
+		@at-root body .in-progress & {
+			// color: $color-black;
+			color: $color-black;
 
-		&--has-submenu {
-			position: relative;
-			padding-right: rem(18);
+			@include hover {
+				color: $color-blue;	
+			}
 
-			.icon {
-				position: absolute;
-				top: calc(50% - #{rem(4)});
-				right: 0;
-				@include defaultTransition(transform);
+			&--active {
+				color: $color-blue;
 			}
 		}
 
 		&--active {
-			color: $color-red;
-			cursor: default;
+			color: $color-blue;
+		}
 
-			.icon {
-				transform: rotate(180deg);
+		@include hover {
+			color: $color-blue;	
+		}
+
+	
+	}
+
+	&__toggle {
+		margin-left: rem(28);
+		width: rem(32);
+		height: rem(32);
+		font-size: 0;
+		line-height: rem(32);
+		text-align: center;
+		border: 0;
+		padding: 0;
+		background-color: transparent;
+		color: $color-white;
+		cursor: pointer;
+		
+
+		@at-root body .in-progress & {
+			// color: $color-black;
+			color: $color-black;
+		}
+		span {
+			position: relative;
+			display: block;
+			width: 100%;
+			height: 2px;
+			background-color: currentColor;
+			//transition: all .3s;
+		}
+
+		span + span {
+			margin-top: 8px;
+		}
+
+		$delta: 10px;
+		$duration: 0.4s;
+
+		&.active span:nth-child(1) {
+			animation: ease $duration top forwards;
+		}
+
+		&.not-active span:nth-child(1) {
+			animation: ease $duration top-2 forwards;
+		}
+
+		&.active span:nth-child(2) {
+			animation: ease $duration scaled forwards;
+		}
+
+		&.not-active span:nth-child(2) {
+			animation: ease $duration scaled-2 forwards;
+		}
+
+		&.active span:nth-child(3) {
+			animation: ease $duration bottom forwards;
+		}
+
+		&.not-active span:nth-child(3) {
+			animation: ease $duration bottom-2 forwards;
+		}
+
+		@keyframes top {
+			0% {
+				top: 0;
+				transform: rotate(0);
+			}
+			50% {
+				top: $delta;
+				transform: rotate(0);
+			}
+			100% {
+				top: $delta;
+				transform: rotate(45deg);
+			}
+		}
+
+		@keyframes top-2 {
+			0% {
+				top: $delta;
+				transform: rotate(45deg);
+			}
+			50% {
+				top: $delta;
+				transform: rotate(0deg);
+			}
+			100% {
+				top: 0;
+				transform: rotate(0deg);
+			}
+		}
+
+		@keyframes bottom {
+			0% {
+				bottom: 0;
+				transform: rotate(0);
+			}
+			50% {
+				bottom: $delta;
+				transform: rotate(0);
+			}
+			100% {
+				bottom: $delta;
+				transform: rotate(135deg);
+			}
+		}
+
+		@keyframes bottom-2 {
+			0% {
+				bottom: $delta;
+				transform: rotate(135deg);
+			}
+			50% {
+				bottom: $delta;
+				transform: rotate(0);
+			}
+			100% {
+				bottom: 0;
+				transform: rotate(0);
+			}
+		}
+
+		@keyframes scaled {
+			50% {
+				transform: scale(0);
+			}
+			100% {
+				transform: scale(0);
+			}
+		}
+
+		@keyframes scaled-2 {
+			0% {
+				transform: scale(0);
+			}
+			50% {
+				transform: scale(0);
+			}
+			100% {
+				transform: scale(1);
 			}
 		}
 
 		@include hover {
-			color: $color-red;
+			color: rgba($color-black, 0.4);
 		}
-	}
-
-	&__actions {
-		display: flex;
-		align-items: center;
-	}
-
-	&__buttons {
-		display: flex;
-		align-items: center;
-	}
-
-	&__links {
-		display: flex;
-		align-items: center;
-		font-size: 0;
-		line-height: 1;
 
 		@include media-breakpoint-up(lg) {
-			margin-right: rem(102);
-		}
-		@include media-breakpoint-only(md) {
-			margin-right: rem(64);
-		}
-		@include media-breakpoint-down(sm) {
 			display: none;
 		}
+
 	}
 
-	&__action-link {
-		&:not(:last-child) {
-			margin-right: rem(16);
+	
+	// Animation
+	$animation-duration: 1s !default;
+	$animation-delay: .2s !default;
+	$offset-Y: 20px !default;
+
+	&[data-animate-custom] {
+		#{$root}__logo {
+			transform: translateY($offset-Y);
+			opacity: 0;
+
+			@at-root .is-loaded & {
+				transition-duration: $animation-duration;
+				transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+				transition-property: opacity, transform;
+			}
+		}
+
+		#{$root}__item {
+			@include media-breakpoint-only(lg) {
+				transform: translateY($offset-Y);
+				opacity: 0;
+
+				@at-root .is-loaded & {
+					transition-duration: $animation-duration;
+					transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+					transition-property: opacity, transform;
+				}
+			}
 		}
 	}
 
+	&.animate {
+		#{$root}__logo {
+			opacity: 1;
+			transform: none;
+		}
 
-	// sal, gsap
-
-	& [data-header-item] {
-		opacity: 0;
+		@include media-breakpoint-only(lg) {
+			#{$root}__item  {
+				opacity: 1;
+				transform: none;
+			}
+		}
 	}
 
-	&.is-ready [data-header-item] {
-		opacity: 1;
+	// Delay custom
+	@for $i from 0 through 10 {
+		@include media-breakpoint-only(lg) {
+			#{$root}__item {
+				&[data-index="#{$i}"] {
+					@at-root .is-loaded & {
+						transition-delay: $i * $animation-delay * 0.5;
+					}
+				}
+			}
+		}
 	}
-
-	&.anim-init [data-header-item] {
-		opacity: 1 !important;
-		transform: none !important;
-	}
-
-	&__submenu {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-	}
-	
 }
+
+

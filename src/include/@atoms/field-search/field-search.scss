@@ -91,7 +91,7 @@
   &:-moz-placeholder,
   &::-ms-input-placeholder,
   &::placeholder{
-    color: rgba($color-gray-2, 1) !important; //ie
+    color: rgba($color-black, 1) !important; //ie
 		opacity: 1;
 		text-overflow: ellipsis;
 		// @include text-default;
@@ -100,7 +100,7 @@
 
 	// Отдельно для ie - иначе не будет применен placeholder
   &:-ms-input-placeholder {
-    color: rgba($color-gray-2, 1);
+    color: rgba($color-black, 1);
   }
 
 	&:focus {

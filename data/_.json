@@ -7,5 +7,69 @@
 		"md": 640,
 		"lg": 990
 	},
-  "placeholder": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+  "placeholder": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "footer": {
+    "copy": "© 2018 «LOREMIPSUM.NET» Все права защищены.",
+    "contacts": [
+      {
+        "href": "mailto:info@ipsum228.com",
+        "text": "info@ipsum228.com",
+        "icon": {
+            "name": "20/mail",
+            "size": "20"
+        }
+      },
+      {
+        "href": "javascript:void(0)",
+        "text": "Мы вконтакте",
+        "icon": {
+            "name": "20/vk",
+            "size": "20"
+        }
+      }
+    ],
+    "pay": [
+      {
+        "text": "QIWI wallet",
+        "icon": {
+            "name": "20/qiwi",
+            "size": "20"
+        }
+      },
+      {
+        "text": "Yandex Money",
+        "icon": {
+            "name": "20/yandex",
+            "size": "20"
+        }
+      },
+      {
+        "text": "Web Money",
+        "icon": {
+            "name": "20/webmoney",
+            "size": "20"
+        }
+      }
+    ]
+  },
+  "menu": {
+    "navigation": [
+      {
+        "text": "Бизнес",
+        "href": "!#"
+      },
+      {
+        "text": "О нас",
+        "href": "!#"
+      },
+      {
+        "text": "Цены",
+        "href": "!#"
+      },
+      {
+        "text": "Оформить заказ",
+        "href": "!#"
+      }
+    ]
+  }
 }

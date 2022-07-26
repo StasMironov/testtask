@@ -2,8 +2,13 @@
 
 {% block content %}
 
-   {% view '&hero' with {
+    {% view '&hero' with {
         hero: hero
     } %}
+
+    {% view '&block-order' with {
+        block: block_order
+    } %}
+	
 
 {% endblock %}

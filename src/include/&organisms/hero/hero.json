@@ -1,74 +1,17 @@
 {
     "hero": {
-        "theme": "has-slider",
-        "logo": {
-            "src": "tmp/hero/logo.svg",
-			"alt": "logo",
-            "href": "/"
-        },
-        "links_info": [
-            {
-                "text": "javascript:void(0);",
-                "href": "о нас"
-            },
-            {
-                "text": "javascript:void(0);",
-                "href": "юр.лицам"
-            },
-            {
-                "text": "javascript:void(0);",
-                "href": "контакты"
-            }
-        ],
-        "email": {
-            "label": "Заказ по email:",
-            "text": "sale@amur-stan.ru",
-            "href": "javascript:void(0);"
-        },
-        "search_form": {
-            "action": "/",
-            "method": "POST",
-            "field": {
-                "big": true,
-                "icon_right": true,
-                "placeholder": "Введите что нибудь...",
-                "icon": {
-                    "name": "search"
-                }
-            }
-        },
-        "block_contacts": {
-            "title": "Бесплатный звонок по России",
-            "items": [
-                {
-                    "href": "tel:880064072288",
-                    "text": "8 800 <span>6407-22-88</span>",
-                    "action": {
-                        "text": "заказать звонок",
-                        "title": "Button"
-                    },
-                    "icons": [
-                        {
-                            "name": "20/phone",
-                            "size": "20"
-                        }
-                    ]
-                },
-                {
-                    "href": "tel:890264072288",
-                    "text": "8 9026 <span>407-22-88</span>",
-                    "icons": [
-                        {
-                            "name": "23/watsapp",
-                            "size": "23"
-                        },
-                        {
-                            "name": "23/viber",
-                            "size": "23"
-                        }
-                    ]
-                }
-            ]
-        }
+        "background": {
+			"src": "tmp/hero/hero-main/bg.jpg",
+			"alt": "alt image",
+			"tab": {
+				"srcset": [
+					{
+						"src": "tmp/hero/hero-main/bg.jpg",
+						"scale": "1"
+					}
+				]
+			}
+		}
+        
     }
 }
